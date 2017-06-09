@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estela's Garden</title>
+    <!--    CSS-->
+    <link href=" https://fonts.googleapis.com/css?family=Khula|Open+Sans+Condensed:300|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        #grid p {
+            background-color: darkgrey;
+            border: thin solid black;
+        }
+    </style>
+    <!--    SCRIPTS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="/js/quick-fix.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menu").mainMenu({
+                //Add Options here
+				backgroundColor: "#B085F5",
+				"highlightColor": "#E1A6E1",
+				"submenuColor": "#B085F5",
+                "toggleSpeed": 500,
+				"fontColor": "#fff",
+                "menuNumber": "4"
+            });
+            $('.tooltip').tooltip({
+                "backgroundColor": "white",
+                "color": "black",
+                "fontSize": "16px",
+                "border": "solid black"
+            });
+            $('#tooltip-container').css('z-index', 9999);
+            $('aside').stickyAside();
+            $('').equalizeHeight();
+
+
+            $('#stories-1') // select wrapping element by ID
+                .find('.story') // select element to height adjust
+                .equalizeHeight() // sets tallest min-height to element
+                .css('background', '#4b5f9b'); // enter css styles here
+
+            $('#stories-2')
+                .find('.story')
+                .equalizeHeight()
+                .css('background', 'green');
+
+        });
+    </script>
+
+</head>
+<body>
+<!--Menu-->
+    <nav class="menu">
+        <div class="menu-header"><span class="fa">&#xf0c9;</span>Menu</div>
+        <ul class="main-menu list-unstyled">
+            <li><a href="/indexEA.html">Home</a></li>
+            <li><a href="#gridProducts">Our Landscapes</a></li>
+            <li class="subMenu" data-trigger="submenu"><a href="#">Garden's Styles<span class="fa">&#xf150;</span></a>
+                <ul class="list-unstyled">
+                    <li data-trigger="submenu"><a href="basic.html">Basic</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="basicJungle.html">Jungle</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="BasicDesert.html">Desert</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="basicMinimalist.html">Minimalist</a></li>
+                </ul>
+            </li>
+
+            <li class="subMenu" data-trigger="submenu"><a href="">Order Online<span class="fa">&#xf150;</span></a>
+                <ul class="list-unstyled">
+                    <li class="table-unstyled" data-trigger="submenu"><a href="formFlowers.html">Flowers</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="formFruitT.html">Fruit Trees</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="formShadeT.html">Shade Trees</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="formLandscape.html">Landscape Ideas</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--    Hero Image-->
+
+    <header class="img-box">
+        <div class="text-box">
+            <h1 id="hero" style="color: #fff; background-color: #CCB1F7;">Welcome to Estela's Garden</h1>
+        </div>
+        <div class="button-box">
+            <button class="button">Landscapes</button>
+        </div>
+    </header>
+    <main class="grid grid-tab">
+    <div class="content">		
+		
+<!-- ///// -->
+	<!-- 6/12 and 6/12 layout  Garden Landscape -->
+                    <div class="grid grid-tab">
+                        <div class="col-6-12" id="gridProducts">
+								<figure><img class="image-responsive drop-shadow" src="/img/gardenLandscape.png">
+                        <figcaption align="center">Garden Landscape</figcaption>
+                    </figure>
+                        </div>
+                        <div class="col-6-12">
+                            <div class="content">
+								<h3>Garden Landscape</h3>
+                                <p>Quis autem vel eum iure rNeque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                            </div>
+                        </div>
+                    </div>
+	<!--end Layout Garden -->
+
+<h1>Your Order</h1>
+                    <form action="#" method="post">
+                    <fieldset>
+                    <legend>Tell me about yourself</legend>
+                    <label for="firstname">First name: </label>
+                        <input type="text" id="firstname">
+                    <label for="lastname">Last name: </label>
+                      <input type="text" id="lastname">
+                    <label for="email">Email: </label>
+                      <input type="text" id="email"><br>
+                    <p>Select your option:</p>
+					<input type="radio" name="fruitTrees" value="fruitTrees">Fruit Trees<br>		
+                    <input type="radio" name="flowers" value="Flowers">Flowers<br>
+					<input type="radio" name="shadowTrees" value="shadowTrees">Shadow Trees<br>		
+                    <input type="radio" name="landscape" value="Landscape">Garden Landscape<br><br>
+                    <select>
+                    <option>Where do you live?</option>
+                  	<option value="SF">San Francisco</option>
+                  	<option value="LA">Los Angeles</option>
+                  	<option value="NY">New York</option>
+                  	<option value="Seattle">Seatle</option>
+                    </select>
+                    <br>
+                    <p>Comments:</p>
+                    <textarea></textarea>
+                    <br>
+                    <input type="submit" value="Send"> <input type="reset">
+
+                    </fieldset>
+                 </form>
+                <br>
+</body>
+</html>

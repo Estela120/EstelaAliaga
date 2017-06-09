@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estela's Garden</title>
+    <!--    CSS-->
+    <link href=" https://fonts.googleapis.com/css?family=Khula|Open+Sans+Condensed:300|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+<!--	<link rel="stylesheet" href="../css/styling.css">-->
+<!--	<link rel="stylesheet" href="../css/jquery.sticky.css">-->
+    <style>
+        #grid p {
+            background-color: darkgrey;
+            border: thin solid black;
+        }
+    </style>
+    <!--    SCRIPTS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="/js/quick-fix.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menu").mainMenu({
+                //Add Options here
+				backgroundColor: "#B085F5",
+				"highlightColor": "#E1A6E1",
+				"submenuColor": "#B085F5",
+                "toggleSpeed": 500,
+				"fontColor": "#fff",
+                "menuNumber": "4"
+            });
+            $('.tooltip').tooltip({
+                "backgroundColor": "white",
+                "color": "black",
+                "fontSize": "16px",
+                "border": "solid black"
+            });
+            $('#tooltip-container').css('z-index', 9999);
+            $('aside').stickyAside();
+            $('').equalizeHeight();
+
+
+            $('#stories-1') // select wrapping element by ID
+                .find('.story') // select element to height adjust
+                .equalizeHeight() // sets tallest min-height to element
+                .css('background', '#4b5f9b'); // enter css styles here
+
+            $('#stories-2')
+                .find('.story')
+                .equalizeHeight()
+                .css('background', 'green');
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <!--Menu-->
+    <nav class="menu">
+        <div class="menu-header"><span class="fa">&#xf0c9;</span>Menu</div>
+        <ul class="main-menu list-unstyled">
+            <li><a href="/indexEA.html">Home</a></li>
+            <li><a href="#gridProducts">Our Products</a></li>
+            <li class="subMenu" data-trigger="submenu"><a href="#">Garden's Styles<span class="fa">&#xf150;</span></a>
+                <ul class="list-unstyled">
+                    <li data-trigger="submenu"><a href="basic.html">Basic</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="basicJungle.html">Jungle</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="BasicDesert.html">Desert</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="basicMinimalist.html">Minimalist</a></li>
+                </ul>
+            </li>
+
+            <li class="subMenu" data-trigger="submenu"><a href="">Order Online<span class="fa">&#xf150;</span></a>
+                <ul class="list-unstyled">
+                    <li class="table-unstyled" data-trigger="submenu"><a href="formFlowers.html">Flowers</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="formFruitT.html">Fruit Trees</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="formShadeT.html">Shade Trees</a></li>
+                    <li class="table-unstyled" data-trigger="submenu"><a href="formLandscape.html">Landscape Ideas</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--    Hero Image-->
+
+    <header class="img-box">
+        <div class="text-box">
+            <h1 id="hero" style="color: #fff; background-color: #CCB1F7;">Welcome to Estela's Garden</h1>
+        </div>
+        <div class="button-box">
+            <button class="button">Jungle Garden</button>
+        </div>
+    </header>
+    <main class="grid grid-tab">
+    <div class="content">
+	 
+		<!-- VIDEO 1 -->
+			 <div class="col-8-12" class="move-left">
+                        <h2 id="video" class="tooltip" data-tip-type="text" tooltip-title="This is a video file from Youtube">We are a green team working to make you happy!</h2>
+                        <div class="videoWrapper">
+                            <!-- Copy & Pasted from YouTube -->
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/6bXdBWNMjkw" frameborder="0" allowfullscreen></iframe>
+                        </div>
+             </div>
+		<!-- end VIDEO 1 -->  
+				
+
+                <div id="gridProducts" class="col-12-12">
+                    <h2>Our Products</h2>
+					 <!-- 8/12 and 4/12 layout -->
+                    <div class="grid grid-tab">
+                        <div class="col-4-12">
+                            <div class="content">
+                                <figure ><img class="image-responsive brightness" src="/img/flowers1.png">
+                        <figcaption align="center">Flowers</figcaption>
+                    </figure>
+                            </div>
+                        </div>
+						
+						<div class="col-4-12">
+                            <div class="content">
+                                <div class="content">
+                                <figure ><img class="image-responsive brightness" src="/img/flowers3.png">
+                        <figcaption align="center">Flowers</figcaption>
+                    </figure>
+                            </div>
+                            </div>
+                        </div>
+						
+						<div class="col-4-12">
+                            <div class="content">
+                                <h3>Flowers</h3>
+                                <p>Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-tab">
+                        <div class="col-4-12">
+                            <div class="content" align="center">
+                                <b><p>Roses</p></b>
+                            </div>
+                        </div>
+						
+						<div class="col-4-12">
+                            <div class="content" align="center">
+                                <b><p>Tulips</p></b>
+                            </div>
+                        </div>
+						
+						<div class="col-4-12">
+                            <div class="content" align="center">
+                                <b><p>Succulents</p></b>
+                            </div>
+                        </div>
+						
+                    </div>
+
+					<!-- 6/12 and 6/12 layout  Garden Landscape -->
+                    <div class="grid grid-tab">
+                        <div class="col-6-12">
+<!--                            <div class="content">-->
+								<figure><img class="image-responsive drop-shadow" src="/img/jungle.png">
+                        <figcaption align="center">Jungle Garden Landscape</figcaption>
+                    </figure>
+<!--                                <p>col-6-12 </p>-->
+<!--                            </div>-->
+                        </div>
+                        <div class="col-6-12">
+                            <div class="content">
+								<h3>Jungle Garden Landscape</h3>
+                                <p>Quis autem vel eum iure rNeque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                            </div>
+                        </div>
+                    </div>
+					<!--end Garden Landscape -->
+	           
+                    <!-- 6/12 and 6/12 layout  Trees -->
+                    <div class="grid grid-tab">
+                        <div class="col-6-12">
+<!--                            <div class="content">-->
+								<figure><img class="image-responsive drop-shadow" src="/img/shadeTree_01.png">
+                        <figcaption align="center">Shade Trees</figcaption>
+                    </figure>
+                        </div>
+                        <div class="col-6-12">
+                            <div class="content">
+								<h3>Shade Trees</h3>
+                                <p>Quis autem vel eum iure rNeque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                            </div>
+                        </div>
+                    </div>
+					<!--end Trees -->				
+					
+                </div>
+                <br>
+</div>       
+    </main>
+
+    <div class="grid grid-tab">
+        <div class="col-12-12">
+            <div class="content">
+
+                <h2 id="height">About Us</h2>
+                <section>
+                    <section>
+                        <h3>
+                            We are a family business specialized in Custom's Landscape since 2001
+                        </h3>
+                    </section>
+                    <section id="stories-1">
+                        <div class="story">
+							 <table class = "table-striped">
+
+                 <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>$ Range</th>
+                  </tr>
+                  </thead>
+                <tbody>
+                  <tr>
+                    <td>Flowers</td>
+                    <td>Colors Various</td>
+                    <td>$20-$40 per dozen</td>
+                  </tr>
+                  <tr>
+                    <td>Trees</td>
+                    <td>Fruits and Shade</td>
+                    <td>$100-$300 each</td>
+                  </tr>
+                    <tr>
+                    <td>Landscapes</td>
+                    <td>Various</td>
+                    <td>Request Quote</td>
+                  </tr>
+                </tbody>
+                </table> 
+<div class="content">
+		<!-- VIDEO 1 -->
+			 <div class="col-6-12">
+                        <h2 id="video" class="tooltip" data-tip-type="text" tooltip-title="This is a video file from Youtube">Landscape Ideas - Gardens</h2>
+                        <div class="videoWrapper">
+                            <!-- Copy & Pasted from YouTube -->
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/6a1zbt_R-dg" frameborder="0" allowfullscreen></iframe>
+                        </div>
+   			 </div>
+		<!-- end VIDEO 1 -->
+	    <!-- VIDEO 2 -->
+			 <div class="col-6-12">
+                        <h2 id="video" class="tooltip" data-tip-type="text" tooltip-title="This is a video file from Youtube">Landscape Ideas - Flowers</h2>
+                        <div class="videoWrapper">
+                            <!-- Copy & Pasted from YouTube -->
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/GZTuvH0D6mw" frameborder="0" allowfullscreen></iframe>
+                        </div>
+             </div>
+		<!-- end VIDEO 2 -->		
+							</div>	
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer footer-center height-100">
+        <p>Address &amp; Phone:&nbsp; 123 Park Str. CA 92101  &nbsp; &nbsp; ph: 858.555.1111</p>
+		<p>Hours:&nbsp; Mo-Fr 9am-5pm  Sa 10am-4pm</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+header,
+article,
+footer {
+    margin: 20px auto;
+}
+
+header,
+footer {
+    width: 450px;
+    height: 100px;
+    background-color: #c0c;
+}
+
+footer {
+    height: 700px;
+}
+
+article {
+    width: 300px;
+    position: relative;
+    right: -75px;
+    height: 150px;
+    background-color: #cc0;
+}
+
+aside {
+/*    width: 130px;*/
+	width: 200px;
+/*	right:50%;*/
+    right: 3%;
+    margin-right: 95px;
+    height: 220px;
+/*	height:150px;*/
+    background-color: #F7CEF7;
+    position: absolute;	
+    color: #A00CA0;
+	text-align: center;
+}
+
+aside.fixed {
+    position: fixed;
+}
+
+section#stories-1 {
+	color:#fff;
+	height: auto;
+}
+
+.story {
+	min-height: auto;
+}
+
+div.story b {
+	color:floralwhite;
+}
+
+
+section#stories-2 {
+	color:#fff;
+	
+}
